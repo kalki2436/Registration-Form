@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   
+
+
+  <style>
+   
+	*{
+    box-sizing: border-box;
+    margin: 2px;
+    padding: 2px;
+    outline: none;
+	
+}
+body{
+	
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background-color: #607680;
+	background-size:cover;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container{
+    background: linear-gradient( to left top,#ffffff,#0066ff);
+    border-radius: 5px;
+    width: 800px;
+    max-width: 100%;
+
+    overflow: hidden;
+}
+.header{
+    background:  linear-gradient( to left top, #ffffff,#003399,) ;
+    padding: 20px 40px;
+    border-bottom: 2px solid #000066;
+}
+
+     .error {
+      border: 2px solid red;
+    }
+
+    .error-message {
+      color: red;
+	  }
+
+  </style>
+</head>
+
+<body background="mount5.jpg">
+  <div class="container mt-3">
+    <h1></h1>
+    <center>
+	<div class="header">
+      <h2><u><font color="black" face="Lucida Calligraphy"><b>
+            Optim<font color="blue">us</font> Registration form...
+          </u></h2>
+    </center>
+	
+    <img src="optimus1.png" align="right">
+
+
+
+    <form action="optimus.html" class="form" id="form">
+      <div class="row">
+        <div class="col">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" placeholder="First" name="name" required >
+        </div>
+        <div class="col">
+          <label for="last_name">Last Name:</label>
+          <input type="text" class="form-control" placeholder="Last" name="last_name" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" placeholder="Enter email" name="email" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" placeholder="Enter password" name="password" required>
+        </div>
+        <div class="col">
+          <label for="phone_number">Phone Number:</label>
+          <input type="number" class="form-control" placeholder="Enter phone number" name="phone_number" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="date_of_birth">Date of Birth:</label>
+          <input type="number" class="form-control " placeholder="DD/MM/YYYY" name="date_of_birth" required>
+        </div>
+        <div class="col">
+          <label for="district">District:</label>
+          <select class="form-control " name="district" required>
+            <option value="">Select District</option>
+            <option value="Anathapur">Anathapur</option>
+            <option value="Tirupathi">Tirupathi</option>
+            <option value="Ongole">Ongole</option>
+            <option value="Nellore">Nellore</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="pincode">Pincode:</label>
+          <input type="number" class="form-control" placeholder="Pincode" name="pincode" required>
+        </div>
+        <div class="col">
+          <label for="state">State:</label>
+          <select class="form-control" name="state" required>
+            <option value="">Select State</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="West Bengal">West Bengal</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <label for="address">Address:</label>
+        <textarea class="form-control" rows="5" id="address" name="address" required></textarea>
+      </div>
+      <center>
+        <h1></h1><u>
+          <h3><font color="black" face="Monotype Corsiva" size="7">Intern<font color="blue"> ship</font></font><font color="black">
+				Details</h3>
+        </u></center>
+      <div class="row">
+        <div class="col">
+          <label for="company">Company:</label>
+          <input type="text" class="form-control" placeholder="Company name" name="company" required>
+        </div>
+        <div class="col">
+          <label for="course">Course:</label>
+          <input type="text" class="form-control" placeholder="Course name" name="course" required>
+        </div>
+      </div>
+      <p>Please select your favorite Web language:</b></p>
+      
+
+<div class="col">
+  <input type="radio" id="html" name="fav_language" value="HTML" required>
+  <label for="html">HTML</label>
+
+  <input type="radio" id="css" name="fav_language" value="CSS" required>
+  <label for="css">CSS</label>
+
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript" required>
+  <label for="javascript">JavaScript</label>
+  <br>
+
+  <div class="error-message" id="fav_language-error"></div>
+</div>
+
+      <b><p>Please select internship duration:</p></b>
+      <div class="col">
+        <input type="radio" id="1month" name="duration" value="1month" required>
+        <label for="1month">1 Month</label>
+     
+        <input type="radio" id="3month" name="duration" value="3month" required>
+        <label for="3month">3 Months</label>
+     
+      
+        <input type="radio" id="6month" name="duration" value="6month" required>
+        <label for="6month">6 Months</label><br>
+      
+        <div class="error-message" id="duration-error"></div>
+      </div>
+      <b><p>Please select your Hobbies:</p></b>
+      <div class="col">
+        <input type="checkbox" id="Hobbie1" name="hobbies[]" value="Playing Games" required >
+        <label for="Hobbie1">Playing Games</label><br>
+      
+      
+        <input type="checkbox" id="Hobbie2" name="hobbies[]" value="Reading Books" >
+        <label for="Hobbie2">Reading Books</label><br>
+     
+     
+        <input type="checkbox" id="Hobbie3" name="hobbies[]" value="Watching TV" >
+        <label for="Hobbie3">Watching TV</label><br>
+     
+      
+        <div class="error-message" id="hobbies-error"></div>
+      </div>
+
+     
+      <div class="d-grid gap-3">
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+      </div>
+    </form>
+
+	<div><br>
+	<center> Donot have an account......<a href="Untitled1.html"> Sing Up Here...</a>
+
+  <script src="jquery.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Function to validate the form
+      function validateForm() {
+        var form = $("#form")[0];
+        var inputs = form.querySelectorAll("input[required], select[required], textarea[required]");
+        var valid = true;
+
+        $(inputs).each(function (index, input) {
+          if (!$(input).val().trim()) {
+            $(input).addClass("error"); // Add error class for red border
+            valid = false;
+          } else {
+            $(input).removeClass("error"); // Remove error class if valid
+          }
+        });
+
+        var language = $('input[name="fav_language"]:checked');
+        if (language.length === 0) {
+          valid = false;
+          $("#fav_language-error").text("Please Select one language.");
+        } else {
+          $("#fav_language-error").text("");
+        }
+
+        var duration = $('input[name="duration"]:checked');
+        if (duration.length === 0) {
+          valid = false;
+          $("#duration-error").text("Please select duration period.");
+        } else {
+          $("#duration-error").text("");
+        }
+
+        var hobbies = $('input[name="hobbies[]"]:checked');
+        if (hobbies.length === 0) {
+          valid = false;
+          $("#hobbies-error").text("Select at least one hobby.");
+        } else {
+          $("#hobbies-error").text("");
+        }
+
+        if (!valid) {
+          var errorMessage = $("#error-message");
+          errorMessage.text("");
+        }
+
+        return valid;
+      }
+
+      // Attach form validation on submit button click
+      $('button[type="submit"]').click(function (event) {
+        event.preventDefault(); // Prevent form submission
+        if (validateForm()) {
+          // Form is valid, proceed with submission
+          $("#form").submit();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
